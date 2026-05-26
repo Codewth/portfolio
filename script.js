@@ -159,7 +159,9 @@ form.addEventListener("submit", async (e) => {
 
         console.log(response);
 
-        alert("Message sent successfully!");
+        const popup = document.getElementById("success-popup");
+
+popup.classList.add("active");
 
         form.reset();
 
@@ -172,3 +174,26 @@ form.addEventListener("submit", async (e) => {
     }
 
 });
+
+
+/* =========================================
+   SUCCESS POPUP
+========================================= */
+
+const backBtn = document.getElementById("back-home-btn");
+
+if(backBtn) {
+
+    backBtn.addEventListener("click", () => {
+
+        document.getElementById("success-popup")
+            .classList.remove("active");
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+        });
+    });
+}
