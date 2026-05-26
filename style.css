@@ -29,8 +29,8 @@
   --glow-cyan: 0 0 0 transparent;
   --glow-purple: 0 0 0 transparent;
 
-  --font-display: 'Syne', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+--font-display: 'Manrope', sans-serif;
+--font-mono: 'Inter', sans-serif;
 
   --radius: 18px;
   --radius-sm: 10px;
@@ -59,6 +59,24 @@ body {
   line-height: 1.7;
 
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+
+    font-family: var(--font-display);
+
+    letter-spacing: -0.03em;
+
+    line-height: 1.1;
+}
+
+p {
+
+    font-family: var(--font-mono);
+
+    line-height: 1.8;
+
+    color: var(--text-muted);
 }
 
 
@@ -164,14 +182,18 @@ body {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
-  line-height: 1.15;
-  margin-bottom: 48px;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-muted) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 40px;
+
+    color: #111827;
 }
 
 /* ===== BUTTONS ===== */
@@ -288,13 +310,16 @@ body {
   list-style: none;
 }
 .nav-links a {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  text-decoration: none;
-  letter-spacing: 0.05em;
-  transition: var(--transition);
-  position: relative;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 0.92rem;
+
+    font-weight: 600;
+
+    color: #374151;
+
+    letter-spacing: -0.01em;
 }
 .nav-links a::after {
   content: '';
@@ -382,13 +407,22 @@ body {
 }
 .name-line {
 
-  font-size: clamp(3.5rem, 8vw, 6rem);
+    font-size: clamp(3.5rem, 8vw, 6rem);
 
-  background: linear-gradient(
-      135deg,
-      #166534 0%,
-      #22c55e 100%
-  );
+    font-weight: 800;
+
+    letter-spacing: -0.06em;
+
+    background: linear-gradient(
+        135deg,
+        #166534 0%,
+        #22c55e 100%
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
 
   -webkit-background-clip: text;
 
@@ -1371,4 +1405,341 @@ body.light-theme #bg-canvas {
 .bottom-list li {
 
     color: #374151;
+}
+
+
+
+/* =========================================
+   FULL RESPONSIVE FIXES
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .hero {
+
+        padding: 140px 40px 80px;
+
+        gap: 40px;
+    }
+
+    .journey-title {
+
+        font-size: 4.5rem;
+    }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .navbar {
+
+        padding: 16px 24px;
+    }
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 140px;
+    }
+
+    .hero-content {
+
+        width: 100%;
+    }
+
+    .hero-desc {
+
+        margin-inline: auto;
+    }
+
+    .hero-cta {
+
+        justify-content: center;
+    }
+
+    .hero-stats {
+
+        justify-content: center;
+
+        flex-wrap: wrap !important;
+    }
+
+    .hero-visual {
+
+        width: 100% !important;
+
+        max-width: 500px;
+    }
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .project-card.featured {
+
+        grid-column: span 1;
+    }
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .journey-title {
+
+        font-size: 3.8rem;
+
+        line-height: 1;
+    }
+
+    .timeline {
+
+        padding-left: 40px;
+    }
+
+    .timeline-dot {
+
+        left: -31px;
+    }
+
+    .timeline-card {
+
+        padding: 28px;
+    }
+
+    .timeline-date {
+
+        position: static;
+
+        display: inline-block;
+
+        margin-bottom: 20px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+
+        padding: 0 20px;
+    }
+
+    .hero {
+
+        padding-inline: 20px;
+    }
+
+    .name-line {
+
+        font-size: 3rem !important;
+    }
+
+    .subtitle-line {
+
+        font-size: 1.3rem;
+    }
+
+    .hero-desc {
+
+        font-size: 0.95rem;
+    }
+
+    .hero-avatar {
+
+        width: 80px;
+        height: 80px;
+    }
+
+    .hero-cta {
+
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .hero-stats {
+
+        gap: 12px;
+    }
+
+    .stat-num {
+
+        font-size: 0.8rem !important;
+    }
+
+    .stat-label {
+
+        font-size: 0.6rem !important;
+    }
+
+    .section-title {
+
+        font-size: 2rem;
+    }
+
+    .journey-title {
+
+        font-size: 2.8rem;
+
+        letter-spacing: -2px;
+    }
+
+    .journey-subtitle {
+
+        font-size: 1rem;
+    }
+
+    .timeline-card h3 {
+
+        font-size: 1.3rem;
+    }
+
+    .timeline-card h4 {
+
+        font-size: 1rem;
+    }
+
+    .timeline-card li {
+
+        font-size: 0.92rem;
+    }
+
+    .bottom-card {
+
+        padding: 30px;
+    }
+
+    .bottom-list li {
+
+        font-size: 0.95rem;
+    }
+
+    .contact-form {
+
+        padding: 24px;
+    }
+
+    .contact-item {
+
+        padding: 16px;
+    }
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+
+        padding: 14px 18px;
+    }
+
+    .logo-name {
+
+        font-size: 0.9rem;
+    }
+
+    .name-line {
+
+        font-size: 2.5rem !important;
+    }
+
+    .hero {
+
+        padding-top: 120px;
+    }
+
+    .section {
+
+        padding: 70px 0;
+    }
+
+    .journey-section {
+
+        padding: 90px 20px;
+    }
+
+    .timeline {
+
+        padding-left: 24px;
+    }
+
+    .timeline-dot {
+
+        width: 14px;
+        height: 14px;
+
+        left: -20px;
+    }
+
+    .timeline-card {
+
+        padding: 22px;
+    }
+
+    .timeline-date {
+
+        font-size: 0.7rem;
+
+        padding: 10px 16px;
+    }
+
+    .timeline-card ul {
+
+        padding-left: 18px;
+    }
+
+    .project-card {
+
+        padding: 22px;
+    }
+
+    .glass-card {
+
+        border-radius: 18px;
+    }
 }
