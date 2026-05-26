@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranav Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Background canvas for particle effect -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Floating orbs for glassmorphism depth -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-name">Pranav Agrawal</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-tag">// data anaylst at Lysandera</div>
+<div class="hero-avatar">
+  <img src="portfolio.png" alt="Pranav Agrawal" />
+</div>
+      <h1 class="hero-title">
+        <span class="line">Hi, I'm</span>
+        <span class="line name-line">Pranav Agrawal<span class="cursor">_</span></span>
+        <span class="line subtitle-line">Software Developer</span>
+      </h1>
+      <p class="hero-desc">
+        I craft fast, scalable web applications with clean code and thoughtful UX. 
+        Turning ideas into digital experiences that actually work.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+     <div class="hero-stats">
+  <div class="stat">
+    <span class="stat-num">CODE</span>
+    <span class="stat-label">Write it clean</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <span class="stat-num">TEST</span>
+    <span class="stat-label">Break it hard</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <span class="stat-num">DEPLOY</span>
+    <span class="stat-label">Ship it fast</span>
+  </div>
+</div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-window glass-card">
+        <div class="window-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="window-title">portfolio.js</span>
+        </div>
+       <pre class="code-block"><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <span class="c-key">name</span>: <span class="c-str">"Pranav Agrawal"</span>,
+  <span class="c-key">role</span>: <span class="c-str">"Data Analyst"</span>,
+  <span class="c-key">stack</span>: [
+    <span class="c-str">"SQL"</span>, <span class="c-str">"Python"</span>,
+    <span class="c-str">"C++"</span>, <span class="c-str">"PostgreSQL"</span>
+  ],
+  <span class="c-key">passion</span>: <span class="c-str">"Building things"</span>,
+  <span class="c-key">status</span>: <span class="c-str">"Intern at Lysandera"</span>
+};</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label">// 01. about me</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Who I Am</h2>
+          <p>
+            Computer Science student at Bennett University with hands-on experience in Data Science, Full-Stack Web Development, Backend Engineering. Passionate about building real-world solutions, Skilled in problem-solving, team collaboration, and turning ideas into working products. Alongside technical development, experienced in leading teams . Currently seeking internship opportunities in Software Engineering, Data Science to further grow and contribute in fast-paced environments.
+          </p>
+          <p>
+            When I'm not pushing commits, I'm exploring new technologies, contributing to open source, or mentoring aspiring developers.
+          </p>
+          <a href="cv.docx" class="btn btn-outline" download>Download CV ↓</a>
+        </div>
+        <div class="about-cards">
+          <div class="info-card glass-card">
+            <div class="card-icon">⚡</div>
+            <h3>Fast & Efficient</h3>
+            <p>Optimized code that delivers sub-second load times and silky-smooth UX.</p>
+          </div>
+          <div class="info-card glass-card">
+            <div class="card-icon">🔒</div>
+            <h3>Secure by Default</h3>
+            <p>Security-first mindset baked into every layer of the stack.</p>
+          </div>
+          <div class="info-card glass-card">
+            <div class="card-icon">📱</div>
+            <h3>Fully Responsive</h3>
+            <p>Pixel-perfect across all devices from mobile to ultrawide.</p>
+          </div>
+          <div class="info-card glass-card">
+            <div class="card-icon">🤝</div>
+            <h3>Team Player</h3>
+            <p>Great communicator who thrives in collaborative environments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label">// 02. tech stack</div>
+      <h2 class="section-title">Skills & Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-category glass-card">
+          <h3 class="cat-title"><span class="cat-icon">🎨</span> Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3 class="cat-title"><span class="cat-icon">⚙️</span> Backend</h3>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span>
+   
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">C++</span>
+            
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3 class="cat-title"><span class="cat-icon">🗄️</span> Database</h3>
+          <div class="skill-tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span>
+            
+            <span class="tag">MySQL</span>
+            
+          </div>
+           </div>
+        <div class="skill-category glass-card">
+          <h3 class="cat-title"><span class="cat-icon">🗄️</span> AI/DATA</h3>
+          <div class="skill-tags">
+            <span class="tag">Pandas</span>
+            <span class="tag">scikitlearn</span>
+            
+            <span class="tag">powerBI</span>
+            
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3 class="cat-title"><span class="cat-icon">☁️</span> Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Docker</span>
+            <span class="tag">Git</span>
+             <span class="tag">hugging face</span>
+            
+            <span class="tag">Vercel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label">// 03. projects</div>
+      <h2 class="section-title">Featured Work</h2>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card featured">
+          <div class="project-header">
+            <div class="project-number">01</div>
+            <div class="project-links">
+              <a href="#" title="GitHub" class="icon-link">↗ Code</a>
+              <a href="#" title="Live" class="icon-link live">⬡ Live</a>
+            </div>
+          </div>
+          <h3 class="project-title">Air Sentinel AI — Air Quality Monitor  </h3>
+          <p class="project-desc">Trained a regression model on 2+ years of historical AQI data — hit 87% prediction accuracy on held-out test sets.</p>
+          <div class="project-tech">
+            <span>react</span><span>python</span><span>mongodb</span><span>Rest Api</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-header">
+            <div class="project-number">02</div>
+            <div class="project-links">
+              <a href="#" class="icon-link">↗ Code</a>
+              <a href="#" class="icon-link live">⬡ Live</a>
+            </div>
+          </div>
+          <h3 class="project-title">Elevare</h3>
+          <p class="project-desc">Full-stack mental health app for isolated students across India with peer support, professional booking, and self-help resources. Stripe-integrated premium subscriptions..</p>
+          <div class="project-tech">
+            <span>React</span><span>Stripe</span><span>express</span><span>Mongodb</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-header">
+            <div class="project-number">03</div>
+            <div class="project-links">
+              <a href="#" class="icon-link">↗ Code</a>
+              <a href="#" class="icon-link live">⬡ Live</a>
+            </div>
+          </div>
+          <h3 class="project-title">TrustChain — Blockchain-Based Donation Platform</h3>
+          <p class="project-desc"> Built a transparent donation platform where every transaction is securely recorded and verifiable on blockchain.</p>
+          <div class="project-tech">
+            <span>node.js</span><span>mongodb</span><span>react</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== work and experience  ===== -->
+<section class="journey-section" id="journey">
+    <div class="journey-header">
+        <span class="journey-label">JOURNEY</span>
+
+        <h2 class="journey-title">
+            EDUCATION &<br>
+            EXPERIENCE
+        </h2>
+
+        <p class="journey-subtitle">
+            My professional journey and academic milestones so far.
+        </p>
+    </div>
+
+    <div class="timeline">
+
+        <!-- EXPERIENCE -->
+        <div class="timeline-category">EXPERIENCE</div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+                <div class="timeline-date">
+                    JAN 2025 – PRESENT
+                </div>
+
+                <span class="timeline-type">INTERNSHIP</span>
+
+                <h3>Data Analyst Intern</h3>
+
+                <h4>Lysandra Group</h4>
+
+                <ul>
+                    <li>Work with 50,000+ row business datasets weekly — cleaning, querying, and extracting insights</li>
+                    <li>Built and maintain 5+ dashboards in SQL and data visualization tools</li>
+                    <li>Reduced manual reporting time by ~40%</li>
+                    <li>Automated repetitive data-cleaning workflows using Python/pandas</li>
+                    <li>Collaborated across cross-functional teams for weekly performance reporting</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+                <div class="timeline-date">
+                    AUG 2024 – MAY 2025
+                </div>
+
+                <span class="timeline-type">LEADERSHIP</span>
+
+                <h3>Management Head</h3>
+
+                <h4>Devops Club, Bennett University</h4>
+
+                <ul>
+                    <li>Led a 12-person team through tech events and workshops</li>
+                    <li>Coordinated SIH qualification pushes in 2024 and 2025</li>
+                    <li>Managed logistics for events with 200+ participants</li>
+                    <li>Handled vendor coordination and volunteer onboarding</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="timeline-category education-space">
+            EDUCATION
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+                <div class="timeline-date">
+                    AUG 2024 – MAY 2028
+                </div>
+
+                <span class="timeline-type">DEGREE</span>
+
+                <h3>B.Tech — Computer Science Engineering</h3>
+
+                <h4>Bennett University</h4>
+
+                <ul>
+                    <li>CGPA: 7.78</li>
+                    <li>Active member of tech clubs and hackathon communities</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card small-card">
+                <div class="timeline-date">
+                    MAR 2024
+                </div>
+
+                <span class="timeline-type">SECONDARY</span>
+
+                <h3>XII — CBSE (1st Division)</h3>
+
+                <h4>DAV PUBLIC SCHOOL</h4>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card small-card">
+                <div class="timeline-date">
+                    MAR 2022
+                </div>
+
+                <span class="timeline-type">SECONDARY</span>
+
+                <h3>X — CBSE (1st Division)</h3>
+
+                <h4>DAV PUBLIC SCHOOL</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM GRID -->
+    <div class="bottom-grid">
+
+        <div class="bottom-card">
+            <span class="bottom-title">CERTIFICATIONS</span>
+
+            <ul class="bottom-list">
+                <li>–Entrepreneurship Strategy: From Ideation to Exit (2025)</li>
+                <li>–Google Data Analytics Professional Certificate (2026)</li>
+                <li>Anthropic AI Fluency: Framework and Foundations</li>
+                <li>Machine Learning Capstone — Coursera</li>
+            </ul>
+        </div>
+
+        <div class="bottom-card">
+            <span class="bottom-title">ACHIEVEMENTS</span>
+
+            <ul class="bottom-list">
+                <li>Meta PyTorch OpenEnv Hackathon × SST 2026 — AI code-review agent hit 93.3% baseline</li>
+                <li>Smart India Hackathon — qualified & competed in 2024 and 2025 national rounds</li>
+                <li>Devops Club — grew membership to 150+ active students</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label">// 04. contact</div>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="contact-sub">Have a project in mind? I'd love to hear about it. Drop me a message and I'll get back within 24 hours.</p>
+
+      <div class="contact-grid">
+        <form class="contact-form glass-card" id="contact-form">
+
+    <div class="form-group">
+        <label>Name</label>
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label>Message</label>
+
+        <textarea
+            name="message"
+            placeholder="Tell me about your project..."
+            rows="5"
+            required
+        ></textarea>
+    </div>
+
+    <button
+        type="submit"
+        class="btn btn-primary full-width"
+    >
+        Send Message →
+    </button>
+
+</form>
+
+        <div class="contact-info">
+
+    <!-- EMAIL -->
+    <div class="contact-item glass-card">
+
+        <span class="ci-icon">✉️</span>
+
+        <div>
+
+            <div class="ci-label">Email</div>
+
+            <div class="ci-value">
+                <a href="mailto:pranava779@gmail.com">
+                    pranava779@gmail.com
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PHONE -->
+    <div class="contact-item glass-card">
+
+        <span class="ci-icon">📞</span>
+
+        <div>
+
+            <div class="ci-label">Phone</div>
+
+            <div class="ci-value">
+                <a href="tel:+919034805332">
+                    +91 903 XXXX XXX
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- GITHUB -->
+    <div class="contact-item glass-card">
+
+        <span class="ci-icon">🐙</span>
+
+        <div>
+
+            <div class="ci-label">GitHub</div>
+
+            <div class="ci-value">
+                <a href="https://github.com/codewth" target="_blank">
+                    github.com/pranav
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- LINKEDIN -->
+    <div class="contact-item glass-card">
+
+        <span class="ci-icon">💼</span>
+
+        <div>
+
+            <div class="ci-label">LinkedIn</div>
+
+            <div class="ci-value">
+                <a href="https://www.linkedin.com/in/pranavagrawal18/" target="_blank">
+                    linkedin.com/in/pranavagrawal18
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- LOCATION -->
+    <div class="contact-item glass-card">
+
+        <span class="ci-icon">📍</span>
+
+        <div>
+
+            <div class="ci-label">Location</div>
+
+            <div class="ci-value">
+                Noida, India
+            </div>
+
+        </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Pranav Agrawal<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-copy">Crafted with ☕ & passion · 2026</p>
+        <div class="footer-links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
