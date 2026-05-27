@@ -2049,3 +2049,117 @@ body.light-theme #bg-canvas {
         transform: translateY(0px);
     }
 }
+
+
+/* =========================================
+   FONT VISIBILITY FIXES
+========================================= */
+
+/* LABELS */
+
+.form-group label {
+
+    color: #2563eb;
+
+    font-weight: 700;
+
+    font-size: 1rem;
+
+    letter-spacing: -0.01em;
+}
+
+/* INPUTS + TEXTAREA */
+
+.contact-form input,
+.contact-form textarea {
+
+    color: #1e293b;
+
+    font-weight: 600;
+
+    font-size: 1rem;
+
+    background: rgba(255,255,255,0.92);
+
+    border: 1px solid rgba(125,211,252,0.18);
+}
+
+/* PLACEHOLDER */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+
+    color: #64748b;
+
+    opacity: 0.85;
+
+    font-weight: 500;
+}
+
+/* GENERAL TEXT */
+
+p,
+li,
+.timeline-card li,
+.project-desc,
+.about-text {
+
+    color: #334155;
+
+    font-weight: 500;
+}
+
+/* SMALL MUTED TEXT */
+
+.section-sub,
+.hero-desc,
+.timeline-subtitle {
+
+    color: #475569;
+
+    font-weight: 500;
+}
+
+/* BUTTON */
+
+.btn,
+button {
+
+    font-weight: 700;
+
+    letter-spacing: -0.01em;
+}
+
+/* CONTACT INFO */
+
+.ci-label {
+
+    color: #64748b;
+
+    font-weight: 600;
+}
+
+.ci-value {
+
+    color: #1e293b;
+
+    font-weight: 700;
+}
+
+/* NAVBAR */
+
+.nav-links a {
+
+    color: #1e293b;
+
+    font-weight: 600;
+}
+
+/* HERO SUBTITLE */
+
+.subtitle-line {
+
+    color: #334155;
+
+    font-weight: 700;
+}
