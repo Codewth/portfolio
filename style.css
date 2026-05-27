@@ -499,10 +499,21 @@ p {
 /* ===== CODE WINDOW ===== */
 
 .hero-visual {
-    flex: 0 0 420px;
+
+    flex: 0 0 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 }
 
 .code-window {
+
+    width: 100%;
+
+    max-width: 500px;
 
     background: rgba(255,255,255,0.92);
 
@@ -516,6 +527,8 @@ p {
         0 20px 50px rgba(0,0,0,0.08);
 
     backdrop-filter: blur(20px);
+
+    animation: none;
 }
 
 .window-bar {
@@ -569,15 +582,15 @@ p {
 
 .code-content {
 
-    padding: 28px;
+    padding: 18px 22px;
 
     font-family: 'JetBrains Mono', monospace;
 
-    line-height: 2;
+    font-size: 0.82rem;
+
+    line-height: 1.45;
 
     color: #334155;
-
-    font-size: 0.95rem;
 }
 
 /* CODE COLORS */
@@ -2011,15 +2024,13 @@ body.light-theme #bg-canvas {
     border: 1px solid rgba(125,211,252,0.12);
 }
 
-
 .code-content pre {
 
     margin: 0;
 
-    white-space: pre-line;
-
-    line-height: 1.6;
+    white-space: pre-wrap;
 }
+
 .code-content {
 
     padding: 24px;
